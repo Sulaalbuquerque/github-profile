@@ -25,7 +25,7 @@ const Header = props => {
                 const repos = await client.get(`/${props.username}/repos`);
  
                 ctx.setUserData(response.data);
-                ctx.setUserRepos(repos.data);
+                ctx.setRepos(repos.data);
             } catch(err) {
                 console.log(err);
             }
@@ -38,7 +38,7 @@ const Header = props => {
             <HeaderInputContainer>
                 <HeaderInput type="text" value={searchValue} onChange={e => setSearchValue(e.target.value)} />
         
-                {/* <HeaderSearchButton onClick={saveQueryOnURL}>
+                 {/*<HeaderSearchButton onClick={getUserData}>
                     <FiSearch size={15} />
                 </HeaderSearchButton> */}
 

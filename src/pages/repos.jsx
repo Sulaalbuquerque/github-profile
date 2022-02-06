@@ -10,7 +10,7 @@ const Repos = () => {
 
     return (
         <Container>
-            <ReposContainer name={{/*ctx.name*/}} repos={ctx.userRepos} />
+            <ReposContainer name={ctx.userData?.name} repos={ctx.repos}/>
         </Container>
     );
 }
